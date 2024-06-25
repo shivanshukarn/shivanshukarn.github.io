@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs'
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX  } from 'react-icons/bs'
 
 export default function Contact() {
     const socialLinks = {
         instagram: "https://www.instagram.com/shivanshu.karn",
         github: "https://github.com/shivanshukarn",
         linkedin: "https://www.linkedin.com/in/shivanshukarn/",
-        twitter: "https://twitter.com/shivanshukarn_",
+        twitter: "https://x.com/shivanshukarn_",
         email: "work.shivanshukarn@gmail.com"
     }
     return (
@@ -41,7 +41,7 @@ export default function Contact() {
                                 <div className="social mt-4 text-2xl flex flex-row gap-4 justify-center ">
                                     <a href={socialLinks.github} target='_blank' alt="Github"><BsGithub /></a>
                                     <a href={socialLinks.linkedin} target='_blank' alt="LinkedIn"><BsLinkedin /></a>
-                                    <a href={socialLinks.twitter} target='_blank' alt="Twitter"><BsTwitter /></a>
+                                    <a href={socialLinks.twitter} target='_blank' alt="Twitter"><BsTwitterX  /></a>
                                     <a href={socialLinks.instagram} target='_blank' alt="Instagram"><BsInstagram /></a>
                                 </div>
                             </div>

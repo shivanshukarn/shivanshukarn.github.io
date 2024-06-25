@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 import { AiFillHome } from 'react-icons/ai'
 import { BsFillInfoCircleFill } from 'react-icons/bs'
@@ -20,7 +20,9 @@ const Sidebar = () => {
       setNavbar(!navbar);
    };
    const tdate = new Date();
-   const router = useRouter()
+   const pathname = usePathname()
+
+   console.log(pathname)
 
    return (
       <>
@@ -42,37 +44,37 @@ const Sidebar = () => {
                   </div>
                   <ul className="space-y-2 mt-10 md:mt-0">
                      <li>
-                        <Link href="/" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${router.pathname == '/' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
+                        <Link href="/" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${pathname == '/' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
                            <AiFillHome className='ml-3 text-gray-400' />
                            <span className="flex-1 ml-2 whitespace-nowrap">Home</span>
                         </Link>
                      </li>
                      <li>
-                        <Link href="/about" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${router.pathname == '/about' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
+                        <Link href="/about" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${pathname == '/about' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
                            <BsFillInfoCircleFill className='ml-3 text-gray-400' />
                            <span className="flex-1 ml-2 whitespace-nowrap">About</span>
                         </Link>
                      </li>
                      <li>
-                        <Link href="/portfolio" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${router.pathname == '/portfolio' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
+                        <Link href="/portfolio" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${pathname == '/portfolio' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
                            <IoMdCodeWorking className='ml-3 text-gray-400' />
                            <span className="flex-1 ml-2 whitespace-nowrap">Portfolio</span>
                         </Link>
                      </li>
                      <li>
-                        <Link href="/services" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${router.pathname == '/services' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
+                        <Link href="/services" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${pathname == '/services' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
                            <MdMiscellaneousServices className='ml-3 text-gray-400' />
                            <span className="flex-1 ml-2 whitespace-nowrap">Services</span>
                         </Link>
                      </li>
                      <li>
-                        <Link href="/contact" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${router.pathname == '/contact' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
+                        <Link href="/contact" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${pathname == '/contact' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
                            <MdPermContactCalendar className='ml-3 text-gray-400' />
                            <span className="flex-1 ml-2 whitespace-nowrap">Contact</span>
                         </Link>
                      </li>
                      {/* <li>
-                        <Link href="/blog" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${router.pathname == '/blog' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
+                        <Link href="/blog" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${pathname == '/blog' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
                            <FaBlog className='ml-3 text-gray-400' />
                            <span className="flex-1 ml-2 whitespace-nowrap">Blog</span>
                         </Link>

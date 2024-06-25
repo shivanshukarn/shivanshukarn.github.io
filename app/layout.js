@@ -12,12 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={inter.className + " prevent-select"}>
         <Sidebar />
         <main className="p-4 sm:ml-64 h-screen">
           {children}
         </main>
-
       </body>
     </html>
   );

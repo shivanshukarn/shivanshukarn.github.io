@@ -42,9 +42,9 @@ const MySkill = () => {
                     <div className="flex-grow sm:text-left mt-6 sm:mt-0">
                         <h2 className="text-white md:text-3xl text-xl title-font font-medium mb-2">NodeJS</h2>
                         <div className='flex items-center'>
-                            <span>75%</span>
+                            <span>50%</span>
                             <div className="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700 ml-4">
-                                <div className="bg-[#007bff] h-2 rounded-full w-[75%]"></div>
+                                <div className="bg-[#007bff] h-2 rounded-full w-[50%]"></div>
                             </div>
                         </div>
                     </div>
@@ -53,9 +53,9 @@ const MySkill = () => {
                     <div className="flex-grow sm:text-left mt-6 sm:mt-0">
                         <h2 className="text-white md:text-3xl text-xl title-font font-medium mb-2">React</h2>
                         <div className='flex items-center'>
-                            <span>70%</span>
+                            <span>60%</span>
                             <div className="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700 ml-4">
-                                <div className="bg-[#007bff] h-2 rounded-full w-[70%]"></div>
+                                <div className="bg-[#007bff] h-2 rounded-full w-[60%]"></div>
                             </div>
                         </div>
                     </div>
