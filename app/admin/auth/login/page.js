@@ -3,9 +3,9 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/utility/Firebase";
-import { loginAction } from "./loginaction";
+import { loginAction } from "../loginaction";
 
-export const AdminLogin = () => {
+const AdminLogin = () => {
     const formRef = useRef()
     const emailRef = useRef()
     const passwordRef = useRef()
@@ -86,3 +86,5 @@ export const AdminLogin = () => {
         </section>
     )
 }
+
+export default AdminLogin
