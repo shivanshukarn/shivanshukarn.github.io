@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { signOut } from "firebase/auth";
 import { useState, useEffect } from 'react';
 
-const Admin = () => {
+export const Admin = () => {
   const router = useRouter()
   const [ContactFormData, setContactFormData] = useState([]);
 
@@ -101,5 +101,3 @@ const Admin = () => {
     </>
   )
 }
-
-export default Admin
