@@ -13,27 +13,27 @@ import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { ImCancelCircle } from 'react-icons/im'
 
 
-const Sidebar = () => {
-   const [navbar, setNavbar] = useState(false);
+const AdminSidebar = () => {
+   const [adminNavbar, setAdminNavbar] = useState(false);
    const handleClick = () => {
-      setNavbar(!navbar);
+      setAdminNavbar(!adminNavbar);
    };
    const tdate = new Date();
    const pathname = usePathname()
 
-   const IsNavbarVisible = () => {
-      const excludedPaths = ['/admin/auth/login', '/admin/dashboard', '/some-other-page'];
+   const IsAdminNavbarVisible = () => {
+      const excludedPaths = ['/', '/about', '/portfolio', '/services', '/contact', '/admin/auth/login'];
       return !excludedPaths.includes(pathname);
    }
-   const isNavbarVisible = IsNavbarVisible();
+   const isAdminNavbarVisible = IsAdminNavbarVisible();
 
    return (
       <>
-         {isNavbarVisible && <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" className="inline-flex items-center p-2 mt-2 ml-3 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600 absolute right-4 top-4" onClick={handleClick}>
+         {isAdminNavbarVisible && <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" className="inline-flex items-center p-2 mt-2 ml-3 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2 text-gray-400 hover:bg-gray-700 focus:ring-gray-600 absolute right-4 top-4" onClick={handleClick}>
             <HiOutlineMenuAlt1 className='w-6 h-6' />
          </button>}
 
-         {isNavbarVisible && <aside id="logo-sidebar" className={`fixed top-0 left-0 h-screen bg-gray-800 z-40 ease-in duration-300 w-[72vw] md:w-1/5 ${navbar ? 'md:translate-x-0 -translate-x-0' : 'md:translate-x-0 -translate-x-full'}`} aria-label="Sidebar">
+         {isAdminNavbarVisible && <aside id="admin-sidebar" className={`fixed top-0 left-0 h-screen bg-gray-800 z-40 ease-in duration-300 w-[72vw] md:w-1/5 ${adminNavbar ? 'md:translate-x-0 -translate-x-0' : 'md:translate-x-0 -translate-x-full'}`} aria-label="AdminSidebar">
 
             <button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" className="inline-flex items-center p-2 mt-2 ml-3 text-sm rounded-lg md:hidden focus:outline-none focus:ring-2  text-gray-400 hover:bg-gray-700 focus:ring-gray-600 absolute right-3" onClick={handleClick}>
                <ImCancelCircle className='w-6 h-6' />
@@ -43,11 +43,11 @@ const Sidebar = () => {
                <div className='md:mt-12'>
                   <div className="flex flex-col items-center md:mb-5 mb-0 mt-36 md:mt-0">
                      <Image width={100} height={0} src="/profile.jpg" className="mr-3 mb-4 rounded-full cursor-pointer" alt="Shivanshu Karn" />
-                     <span className="self-center text-xl font-semibold whitespace-nowrap text-white cursor-pointer">Shivanshu Karn</span>
+                     <span className="self-center text-xl font-semibold whitespace-nowrap text-white cursor-pointer">Admin Dashboard</span>
                   </div>
                   <ul className="space-y-2 mt-10 md:mt-0">
                      <li>
-                        <Link href="/" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${pathname == '/' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
+                        <Link href="/admin/dashboard" className={`flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-700 ${pathname == '/admin/dashboard' ? 'bg-gray-700' : ''}`} onClick={handleClick}>
                            <AiFillHome className='ml-3 text-gray-400' />
                            <span className="flex-1 ml-2 whitespace-nowrap">Home</span>
                         </Link>
@@ -93,4 +93,4 @@ const Sidebar = () => {
    )
 }
 
-export default Sidebar
+export default AdminSidebar
