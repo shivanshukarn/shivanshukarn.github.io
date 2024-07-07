@@ -5,7 +5,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/utility/Firebase";
 import { loginAction } from "./loginaction";
 
-const AdminLogin = () => {
+export const AdminLogin = () => {
     const formRef = useRef()
     const emailRef = useRef()
     const passwordRef = useRef()
@@ -86,5 +86,3 @@ const AdminLogin = () => {
         </section>
     )
 }
-
-export default AdminLogin
