@@ -17,7 +17,7 @@ export default function About() {
                         <div className="flex flex-col sm:flex-row mt-5">
                             <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">
                                 <div className="w-52 h-52 rounded-full inline-flex items-center justify-center cursor-pointer">
-                                    <Image src="/profile.jpg" className='rounded-full' width={320} height={320} alt='Shivanshu Karn' />
+                                    <Image src="https://avatars.githubusercontent.com/u/83956444?v=4" className='rounded-full' width={320} height={320} alt='Shivanshu Karn' />
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
                                     <h2 className="font-medium title-font mt-4 text-white text-2xl cursor-pointer">Shivanshu Karn</h2>
