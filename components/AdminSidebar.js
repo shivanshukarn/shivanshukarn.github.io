@@ -42,7 +42,7 @@ const AdminSidebar = () => {
             <div className="h-full px-3 py-4 flex flex-col justify-between overflow-y-auto md:m-0">
                <div className='md:mt-12'>
                   <div className="flex flex-col items-center md:mb-5 mb-0 mt-36 md:mt-0">
-                     <Image width={100} height={0} src="/profile.jpg" className="mr-3 mb-4 rounded-full cursor-pointer" alt="Shivanshu Karn" />
+                     <Image width={100} height={0} src="https://avatars.githubusercontent.com/u/83956444?v=4" className="mr-3 mb-4 rounded-full cursor-pointer" alt="Shivanshu Karn" />
                      <span className="self-center text-xl font-semibold whitespace-nowrap text-white cursor-pointer">Admin Dashboard</span>
                   </div>
                   <ul className="space-y-2 mt-10 md:mt-0">
